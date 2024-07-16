@@ -31,7 +31,7 @@ function Login() {
     if (isValid) {
       axios({
         method: "post",
-        url: `http://localhost:8081/login`,
+        url: `https://backend-gamma-peach.vercel.app/login`,
         data: {
           username,
           password,
@@ -56,7 +56,7 @@ function Login() {
     <>
       <div>
         <p className="annotation">{msg !== "" ? msg : null}</p>
-        <div className="form" data-aos="flip-left" >
+        <div className="form" data-aos="flip-left">
           <div className="login-container">
             <div className="logo">
               <div className="logo-container">
@@ -89,11 +89,21 @@ function Login() {
                   <div>
                     <Link to="/forgot">
                       {" "}
-                      <i class="fa-solid fa-arrow-left" style={{marginRight:"6px"}}></i>i forgot password
+                      <i
+                        class="fa-solid fa-arrow-left"
+                        style={{ marginRight: "6px" }}
+                      ></i>
+                      i forgot password
                     </Link>
                   </div>
                   <div>
-                    <button type="Submit"><i class="fa-solid fa-key " style={{marginRight:"6px"}}></i>Secure Login</button>
+                    <button type="Submit">
+                      <i
+                        class="fa-solid fa-key "
+                        style={{ marginRight: "6px" }}
+                      ></i>
+                      Secure Login
+                    </button>
                   </div>
                 </div>
               </form>
